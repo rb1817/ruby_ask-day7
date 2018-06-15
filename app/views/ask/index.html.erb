@@ -1,0 +1,16 @@
+
+<u1 class = "list-group">
+    <% @asks.reverse.each do |ask|%>
+     <li class = "list-group-item">
+         <%= ask.question %>
+     <small>(<%= ask.ip_address %>,<%= ask.region%>)</small>
+     <a href = "/ask/<%=ask.id%>/edit" class = "btn btn-success">수정</a>
+     <a data-confirm ="이 글을 삭제하시겠습니까?" class ="btn btn-danger" href = "/ask/<%= ask.id%>/delete">삭제</a>
+      <a href = "/ask/<%=ask.id%>/show" class = "btn btn-dark">자세히</a>
+     </li>
+    <% end %>
+</u1>
+<br/>
+<div class="text-center">
+    <a class="btn btn-primary" href = "/ask/new">새 질문 등록하기</a>
+</div>

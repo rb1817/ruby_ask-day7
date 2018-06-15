@@ -1,0 +1,8 @@
+<form action = '/ask/create' method = "POST">
+    <input type ="hidden" name = "authenticity_token" value = "<%= form_authenticity_token%>">
+    <input  class ="form-control" type="text" name = "q" placeholder="질문을 입력하세요">
+    <br/>
+    <div class="text-center">
+    <input class="btn btn-info" type="submit" value = "질문하기">
+    </div>
+</form>
